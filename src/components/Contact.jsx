@@ -10,8 +10,22 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    
+    // Build WhatsApp message
+    const message = `Hi Harinii! I'd like to book your services.%0A%0A` +
+      `*Name:* ${form.name}%0A` +
+      `*Phone:* ${form.phone}%0A` +
+      `*Email:* ${form.email || 'Not provided'}%0A` +
+      `*Package:* ${form.package}%0A` +
+      `*Location:* ${form.location}%0A` +
+      `*Date:* ${form.date}%0A` +
+      `*Special Requests:* ${form.notes || 'None'}`
+
+    // Open WhatsApp
+    window.open(`https://wa.me/917708994529?text=${message}`, '_blank')
+
+    // Show confetti
     setSubmitted(true)
-    // Create confetti
     for (let i = 0; i < 50; i++) {
       const confetti = document.createElement('div')
       confetti.className = 'confetti'
