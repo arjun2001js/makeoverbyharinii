@@ -102,8 +102,6 @@ export default function Contact() {
         </div>
         <div className="form-group">
           <input type="text" placeholder="Event Date (DD/MM/YYYY)" required aria-label="Event Date"
-            onFocus={(e) => { e.target.type = 'date' }}
-            onBlur={(e) => { if (!e.target.value) e.target.type = 'text' }}
             value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} />
         </div>
         <div className="form-group">
