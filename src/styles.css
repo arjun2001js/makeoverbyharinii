@@ -1269,7 +1269,8 @@ footer { animation-delay: 0.35s; }
 @keyframes heroShine { 0%,60%{left:-100%} 100%{left:100%} }
 
 /* Date input placeholder fix */
-input[type="date"] { color: #aaa; }
-input[type="date"]:valid { color: var(--dark); }
-input[type="date"]::-webkit-datetime-edit { color: #aaa; }
-input[type="date"]:valid::-webkit-datetime-edit { color: var(--dark); }
+input[type="date"] { position: relative; }
+input[type="date"]::-webkit-datetime-edit { opacity: 0; }
+input[type="date"].has-value::-webkit-datetime-edit { opacity: 1; color: var(--dark); }
+input[type="date"]::before { content: 'Event Date'; color: #aaa; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.88rem; font-weight: 300; }
+input[type="date"].has-value::before { display: none; }

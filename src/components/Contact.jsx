@@ -101,7 +101,8 @@ export default function Contact() {
             value={form.location} onChange={(e) => setForm({ ...form, location: e.target.value })} />
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Event Date (DD/MM/YYYY)" required aria-label="Event Date"
+          <input type="date" placeholder="Event Date" required aria-label="Event Date"
+            className={form.date ? 'has-value' : ''}
             value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} />
         </div>
         <div className="form-group">
