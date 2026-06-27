@@ -1133,11 +1133,11 @@ footer::after {
 .image-viewer {
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw; height: 100vh; z-index: 99999;
-    background: #000; display: flex; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center;
     animation: fadeIn 0.2s ease;
 }
 .image-viewer img {
-    max-width: 100vw; max-height: 100vh; object-fit: contain;
+    max-width: 100vw; max-height: 100vh; object-fit: contain; width: 100%;
 }
 .viewer-close {
     position: absolute; top: 1rem; right: 1rem;
@@ -1267,3 +1267,9 @@ footer { animation-delay: 0.35s; }
 .hero .btn { position: relative; overflow: hidden; }
 .hero .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); animation: heroShine 4s ease infinite; }
 @keyframes heroShine { 0%,60%{left:-100%} 100%{left:100%} }
+
+/* Date input placeholder fix */
+input[type="date"] { color: #aaa; }
+input[type="date"]:valid { color: var(--dark); }
+input[type="date"]::-webkit-datetime-edit { color: #aaa; }
+input[type="date"]:valid::-webkit-datetime-edit { color: var(--dark); }
