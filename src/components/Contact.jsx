@@ -78,21 +78,21 @@ export default function Contact() {
             value={form.package} onChange={(e) => setForm({ ...form, package: e.target.value })}>
             <option value="">Select Package</option>
             <optgroup label="Bridal Packages">
-              <option value="skin-finish">Skin Finish - ₹10,000</option>
-              <option value="hd-makeup">HD Makeup - ₹15,000</option>
-              <option value="glossy-glass">Glossy/Glass Look - ₹20,000</option>
+              <option value="skin-finish">Skin Finish</option>
+              <option value="hd-makeup">HD Makeup</option>
+              <option value="glossy-glass">Glossy/Glass Look</option>
             </optgroup>
-            <optgroup label="Combo (Save ₹500 + No travel charges)">
-              <option value="skin-finish+groom">Skin Finish + Groom - ₹12,500 (save ₹500)</option>
-              <option value="hd-makeup+groom">HD Makeup + Groom - ₹17,500 (save ₹500)</option>
-              <option value="glossy-glass+groom">Glossy/Glass + Groom - ₹22,500 (save ₹500)</option>
-              <option value="skin-finish+trial">Skin Finish + Trial - ₹13,000 (save ₹500)</option>
-              <option value="hd-makeup+trial">HD Makeup + Trial - ₹18,000 (save ₹500)</option>
-              <option value="glossy-glass+trial">Glossy/Glass + Trial - ₹23,000 (save ₹500)</option>
+            <optgroup label="Combo">
+              <option value="skin-finish+groom">Skin Finish + Groom Styling</option>
+              <option value="hd-makeup+groom">HD Makeup + Groom Styling</option>
+              <option value="glossy-glass+groom">Glossy/Glass + Groom Styling</option>
+              <option value="skin-finish+trial">Skin Finish + Trial Makeup</option>
+              <option value="hd-makeup+trial">HD Makeup + Trial Makeup</option>
+              <option value="glossy-glass+trial">Glossy/Glass + Trial Makeup</option>
             </optgroup>
-            <optgroup label="Standalone (+ Travel Charges)">
-              <option value="groom-styling">Groom Styling - ₹3,000</option>
-              <option value="trial-makeup">Trial Makeup - ₹3,500</option>
+            <optgroup label="Standalone">
+              <option value="groom-styling">Groom Styling</option>
+              <option value="trial-makeup">Trial Makeup</option>
             </optgroup>
           </select>
         </div>

@@ -67,9 +67,6 @@ export default function PackageCard({ pkg, delay }) {
       {pkg.featured && <div className="badge">Most Booked</div>}
       <div className="package-number">{pkg.number}</div>
       <h3>{pkg.name}</h3>
-      <div className="price" ref={priceRef}>
-        ₹{pkg.price.toLocaleString('en-IN')} <span className="travel">+ Travel Charges</span>
-      </div>
       <div className="divider"></div>
       {pkg.description && <p className="package-desc">{pkg.description}</p>}
       <ul>
